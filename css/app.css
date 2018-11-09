@@ -84,6 +84,10 @@ h1 {
 /*
  * Styles for the Score Panel
  */
+.Timer {
+    display: inline;
+    margin-left: 50px;
+}
 
 .score-panel {
     text-align: left;
@@ -106,4 +110,28 @@ h1 {
 .score-panel .restart {
     float: right;
     cursor: pointer;
+}
+
+
+/*Styles for the modal*/
+
+.modal {
+    display: flex !important;
+    position: fixed;
+    visibility: visible;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.modal.hide {
+    visibility: hidden;
+    display: none;
+}
+
+.modal .star {
+    list-style-type: none;
+}
+
+.modal #stars {
+    display: inline-flex;
 }

@@ -46,6 +46,7 @@ shuffledCards.forEach(function (e) {
                 clickedCards[0].classList.add('match');
                 matchedCards.push(this, clickedCards[0]);
                 clickedCards = [];
+                stopGame();
             } else {
                 setTimeout(function () {
                     _this.classList.remove('open', 'show');
@@ -101,7 +102,7 @@ let numberOfMoves = 0;
 function countMoves(){
     numberOfMoves++;
     moves.innerHTML = numberOfMoves;
-    if(numberOfMoves == 7 || numberOfMoves == 11 || numberOfMoves == 29)
+    if(numberOfMoves == 7 || numberOfMoves == 11)
     {
        removeStar();
     }
@@ -136,3 +137,30 @@ restart.addEventListener('click',function reset()
     window.location.reload();
 }
 );
+
+//function to stop the game after all cards are matched
+function stopGame() {
+    if(matchedCards.length == 16)
+    {
+        clearInterval(interval);
+        timeTaken = initialTime.innerHTML;
+        openModal();
+    }
+}
+
+let modal = document.getElementById('modal');
+let totalMoves = document.getElementById('moves');
+let totalTime = document.getElementById('time');
+let totalStars = document.getElementById('stars');
+let closeModalButton = document.querySelector('button.btn-secondary');
+//function to open a modal after the game stops
+function openModal() {
+   modal.classList.remove('hide');
+   totalMoves.innerHTML =  numberOfMoves;
+   totalTime.innerHTML = timeTaken;
+   totalStars.innerHTML = document.querySelector('.stars').innerHTML;
+   closeModalButton.addEventListener('click',function() {
+    modal.classList.add('hide');
+    window.location.reload();
+});
+}
