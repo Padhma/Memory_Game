@@ -9,7 +9,7 @@ let cards_array = ['fa fa-gem', 'fa fa-gem', 'fa fa-paper-plane', 'fa fa-paper-p
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-let deckContainer = document.querySelector('.deck');
+const deckContainer = document.querySelector('.deck');
 let clickedCards = [];
 let matchedCards = [];
 let firstClick = true;
@@ -17,7 +17,7 @@ let cardClickedCount = 0;
 let shuffledCards = shuffle(cards_array);
 
 shuffledCards.forEach(function (e) {
-    let card = document.createElement("li");
+    const card = document.createElement("li");
     card.classList.add("card");
     card.innerHTML = "<i class='" + e + "'></i>";
     deckContainer.appendChild(card);
@@ -64,7 +64,7 @@ shuffledCards.forEach(function (e) {
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+    let currentIndex = array.length, temporaryValue, randomIndex;
 
     while (currentIndex !== 0) {
         randomIndex = Math.floor(Math.random() * currentIndex);
@@ -92,7 +92,7 @@ function shuffle(array) {
 //function to eliminate star depending on moves
 function removeStar() {
        let starCollection = document.querySelector('ul');
-       let  stars = document.querySelector('li'); 
+       let  stars = document.querySelector('li');
        starCollection.removeChild(stars);
 }
 
@@ -131,7 +131,7 @@ function startTimer(){
 }
 
 //function to reset the game using restart button
-let restart = document.querySelector('.restart');
+const restart = document.querySelector('.restart');
 restart.addEventListener('click',function reset()
 {
     window.location.reload();
@@ -152,7 +152,7 @@ let modal = document.getElementById('modal');
 let totalMoves = document.getElementById('moves');
 let totalTime = document.getElementById('time');
 let totalStars = document.getElementById('stars');
-let closeModalButton = document.querySelector('button.btn-secondary');
+const closeModalButton = document.querySelector('button.btn-secondary');
 //function to open a modal after the game stops
 function openModal() {
    modal.classList.remove('hide');

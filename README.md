@@ -1,20 +1,12 @@
 # Memory Game Project
+Memory game is a simple javascript game which tests the Player's memory by matching a deck of cards.
 
-## Table of Contents
+## How to Play? 
+Keep clicking each card until you find a match between each card. 
+Once all the cards are matched the game ends.
+Make your moves faster to get a better rating.
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-
-## Instructions
-
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+## Technologies used in this Project
+This project uses
+* vanilla JS
+* Bootstrap
