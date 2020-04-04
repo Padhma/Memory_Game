@@ -10,3 +10,5 @@ Make your moves faster to get a better rating.
 This project uses
 * vanilla JS
 * Bootstrap
+
+[Run the application here](https://padhma.github.io/Memory_Game_fend/)
