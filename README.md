@@ -11,4 +11,4 @@ This project uses
 * vanilla JS
 * Bootstrap
 
-[Run the application here](https://padhma.github.io/Memory_Game_fend/)
+[Run the application here](https://padhma.github.io/Memory_Game/)
